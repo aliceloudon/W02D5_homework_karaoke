@@ -1,9 +1,9 @@
 class Room
 
-
-  def initialize(capacity, guests)
+  def initialize(capacity, guests, playlist)
     @capacity = capacity
     @guests = []
+    @playlist = []
   end
 
   def show_capacity
@@ -20,6 +20,10 @@ class Room
 
   def remove_guest(person)
     @guests.delete(person)  
+  end
+
+  def number_of_songs
+    return @playlist.size
   end
 
 end
