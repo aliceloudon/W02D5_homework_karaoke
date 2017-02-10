@@ -9,7 +9,7 @@ class TestRoom < MiniTest::Test
   def setup
     @room1 = Room.new(4, [], [], 10)
     @guest1 = Guest.new("Suzanne", 50, "Something Inside So Strong")
-    @guest2 = Guest.new("David", 150, "Shut up and Dance")
+    @guest2 = Guest.new("David", 5, "Shut up and Dance")
     @guest3 = Guest.new("David", 150, "Shut up and Dance")
     @guest4 = Guest.new("David", 150, "Shut up and Dance")
     @guest5 = Guest.new("David", 150, "Shut up and Dance")
@@ -65,6 +65,14 @@ class TestRoom < MiniTest::Test
 
   def test_entry_fee
     assert_equal(10, @room1.show_entry_fee)
+  end
+
+  def test_guest_can_pay_fee__true
+    assert_equal(true, @room1.guest_can_pay_fee(@guest1))
+  end
+
+  def test_guest_can_pay_fee__false
+    assert_equal(false, @room1.guest_can_pay_fee(@guest2))
   end
 
 end

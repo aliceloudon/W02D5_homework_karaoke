@@ -47,4 +47,12 @@ class Room
     return @entry_fee
   end
 
+  def guest_can_pay_fee(person)
+    if person.money >= @entry_fee
+      return true
+    else
+      return false
+    end
+  end
+
 end
