@@ -1,8 +1,9 @@
 class Room
 
+
   def initialize(capacity, guests)
     @capacity = capacity
-    @guests = guests
+    @guests = []
   end
 
   def show_capacity
@@ -11,6 +12,10 @@ class Room
 
   def number_of_guests
     return @guests.size
+  end
+
+  def add_guest(person)
+    @guests.push(person)
   end
 
 end
