@@ -26,4 +26,12 @@ class Room
     return @playlist.size
   end
 
+  def add_song_to_playlist(song)
+    @playlist.push(song)
+  end
+
+  def remove_song_from_playlist(song)
+    @playlist.delete(song)
+  end
+
 end
