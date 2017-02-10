@@ -1,9 +1,10 @@
 class Room
 
-  def initialize(capacity, guests, playlist)
+  def initialize(capacity, guests, playlist, entry_fee)
     @capacity = capacity
     @guests = []
     @playlist = []
+    @entry_fee = entry_fee
   end
 
   def show_capacity
@@ -40,6 +41,10 @@ class Room
     else
       return "Spaces available"
     end
+  end
+
+  def show_entry_fee
+    return @entry_fee
   end
 
 end
