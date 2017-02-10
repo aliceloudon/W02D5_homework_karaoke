@@ -34,4 +34,12 @@ class Room
     @playlist.delete(song)
   end
 
+  def capacity_vs_guests
+    if @capacity <= @guests.size
+      return "Room full"
+    else
+      return "Spaces available"
+    end
+  end
+
 end
