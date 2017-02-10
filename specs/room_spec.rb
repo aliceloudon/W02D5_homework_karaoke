@@ -18,7 +18,7 @@ class TestRoom < MiniTest::Test
   end
 
   def test_number_of_guests
-    assert_equal(0, @room1.number_of_guests)
+    assert_equal(2, @room1.number_of_guests)
   end
 
 end

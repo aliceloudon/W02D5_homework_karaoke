@@ -2,7 +2,7 @@ class Room
 
   def initialize(capacity, guests)
     @capacity = capacity
-    @guests = []
+    @guests = guests
   end
 
   def show_capacity
