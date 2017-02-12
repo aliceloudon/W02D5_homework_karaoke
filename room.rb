@@ -56,4 +56,8 @@ class Room
     end
   end
 
+  def show_room_name
+    return @name    
+  end
+
 end

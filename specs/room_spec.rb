@@ -79,5 +79,9 @@ class TestRoom < MiniTest::Test
     assert_equal(false, @room1.guest_can_pay_fee(@guest2))
   end
 
+  def test_show_room_name
+    assert_equal("funk and soul", @room1.show_room_name)    
+  end
+
 end
 

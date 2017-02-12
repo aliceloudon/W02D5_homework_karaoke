@@ -28,7 +28,7 @@ if answer == "room"
   entry_fee = gets.chomp
 
   puts
-  puts "Great, you have set up a new room called #{room_name}, which has a capacity of #{room_capacity} and an entry fee of #{entry_fee}."
+  puts "You have set up a new room called #{room_name}, which has a capacity of #{room_capacity} and an entry fee of #{entry_fee}."
 
   # @room1 = Room.new(room_name, room_capacity, [], [], entry_fee)
   # puts @room1.show_entry_fee
@@ -38,6 +38,10 @@ elsif answer == "guest"
   puts
   puts "What is the name of the guest?"
   guest_name = gets.chomp
+
+  puts
+  puts "Which room are you adding the guest to? The following are available:"
+  puts @room1.show_room_name
 
   puts
   puts "How much money does #{guest_name} have (in GBP)?"
@@ -54,7 +58,7 @@ elsif answer == "guest"
   favourite_song = gets.chomp
 
   puts
-  puts "Great, you have added a new guest called #{guest_name}, who has #{guest_money} and their favourite song is #{favourite_song}."
+  puts "You have added a new guest called #{guest_name}, who has #{guest_money} and their favourite song is #{favourite_song}."
 
   # @guest1 = Guest.new(guest_name, guest_money, favourite_song)
 
@@ -78,3 +82,4 @@ else
 
 end
 
+return room.name
