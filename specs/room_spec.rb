@@ -7,15 +7,19 @@ require_relative('../song.rb')
 class TestRoom < MiniTest::Test
 
   def setup
-    @room1 = Room.new(4, [], [], 10)
+
+    @room1 = Room.new("funk and soul", 4, [], [], 10)
+
     @guest1 = Guest.new("Suzanne", 50, "Something Inside So Strong")
     @guest2 = Guest.new("David", 5, "Shut up and Dance")
-    @guest3 = Guest.new("David", 150, "Shut up and Dance")
-    @guest4 = Guest.new("David", 150, "Shut up and Dance")
-    @guest5 = Guest.new("David", 150, "Shut up and Dance")
+    @guest3 = Guest.new("Rob", 150, "Steal the Light")
+    @guest4 = Guest.new("Adam", 150, "Money Money Money")
+    @guest5 = Guest.new("Chris", 150, "You are the one and only")
+
     @song1 = Song.new("Crave You", 4)
     @song2 = Song.new("Steal the Light", 3)
     @song3 = Song.new("Stay the Same", 5)
+
   end
 
   def test_show_capacity

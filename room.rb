@@ -1,6 +1,7 @@
 class Room
 
-  def initialize(capacity, guests, playlist, entry_fee)
+  def initialize(name, capacity, guests, playlist, entry_fee)
+    @name = name
     @capacity = capacity
     @guests = []
     @playlist = []
